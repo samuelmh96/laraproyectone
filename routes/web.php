@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('custom/', function () {
+    $message = 'Esto es un disfraz';
+    return view('custom', ['sms' => $message]);
+});
+
+Route::get('/contacts', function () {
+    return "Contactanos";
+})->name('contactos');
